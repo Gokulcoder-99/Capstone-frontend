@@ -27,7 +27,7 @@ console.log(data)
 const handleApproval = async (employeeId,tokenRequested ,jwtToken) => {
   console.log(employeeId,tokenRequested,jwtToken)
   try {
-    await axios.put('http://localhost:4000/api/admin/giveMoreTokens', {employeeId:employeeId ,tokenRequested:tokenRequested },{
+    await axios.put('https://zoro-food-token.onrender.com/api/admin/giveMoreTokens', {employeeId:employeeId ,tokenRequested:tokenRequested },{
       headers: {
         authorization: `BEARER ${jwtToken}`,
       },
