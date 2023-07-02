@@ -32,7 +32,7 @@ function Beverages() {
           const tokenType =selectedOption.value
           const data={tokenType,employeeId}
           try {
-            const response = await axios.post("http://localhost:4000/api/employee/generateToken",data);
+            const response = await axios.post("https://zoro-food-token.onrender.com/api/employee/generateToken",data);
             console.log(response);
           } catch (err) {
             return err.response;
