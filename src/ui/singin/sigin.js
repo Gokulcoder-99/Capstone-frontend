@@ -24,7 +24,7 @@ function Signin() {
           
           const data ={email,password}
         try{
-            const resUser = await axios.post('http://localhost:4000/api/auth/signin',data);
+            const resUser = await axios.post('https://zoro-food-token.onrender.com/api/auth/signin',data);
             const JWT = resUser.data.tokenGenerated
             const {name,email,employeeId,userRole,isVerified,token}= resUser.data.userData
             const user={name,email,employeeId,userRole,isVerified,JWT,token}
