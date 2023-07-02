@@ -12,7 +12,7 @@ function Getallnotverifed() {
     }, []);
     const fetchData = async (jwtToken) => {
       try {
-        const response = await axios.get('http://localhost:4000/api/admin/notverified',{
+        const response = await axios.get('https://zoro-food-token.onrender.com/api/admin/notverified',{
             headers: {
               authorization: `BEARER ${jwtToken}`,
             },
@@ -26,7 +26,7 @@ function Getallnotverifed() {
     const handleApproval = async (employeeId,jwtToken) => {
        
         try {
-          await axios.put('http://localhost:4000/api/admin/authorizeUser', {employeeId:employeeId},{
+          await axios.put('https://zoro-food-token.onrender.com/api/admin/authorizeUser', {employeeId:employeeId},{
             headers: {
               authorization: `BEARER ${jwtToken}`,
             },
