@@ -20,7 +20,7 @@ function Request() {
           const data={tokenRequested,employeeId}
           console.log(data)
           try {
-            const response = await axios.put("http://localhost:4000/api/employee/requestmoretokens",data);
+            const response = await axios.put("https://zoro-food-token.onrender.com/api/employee/requestmoretokens",data);
             console.log(response);
           } catch (err) {
             return err.response;
