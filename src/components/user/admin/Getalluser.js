@@ -12,7 +12,7 @@ const Getalluser=()=>{
     }, []);
     const fetchData = async (jwtToken) => {
       try {
-        const response = await axios.get('http://localhost:4000/api/admin/alluser',{
+        const response = await axios.get('https://zoro-food-token.onrender.com/api/admin/alluser',{
             headers: {
               authorization: `BEARER ${jwtToken}`,
             },
