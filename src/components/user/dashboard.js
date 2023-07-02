@@ -18,7 +18,7 @@ function Dashboard() {
  }, []);
  const fetchData = async (id) => {
    try {
-     const response = await axios.post('http://localhost:4000/api/employee/myHistroy', {employeeId:id });
+     const response = await axios.post('https://zoro-food-token.onrender.com/api/employee/myHistroy', {employeeId:id });
      setData( response.data.userTokens )// Handle the response data
    } catch (error) {
      console.error(error); // Handle any errors
@@ -37,7 +37,7 @@ function Dashboard() {
 
   const verifyData = async (counter,jwtToken) => {
     try {
-      const response = await axios.post('http://localhost:4000/api/counter/verifyToken', {tokenFromRequest:counter },{
+      const response = await axios.post('https://zoro-food-token.onrender.com/api/counter/verifyToken', {tokenFromRequest:counter },{
         headers: {
           authorization: `BEARER ${jwtToken}`,
         },
