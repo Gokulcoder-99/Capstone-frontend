@@ -13,7 +13,7 @@ function Conformtoken() {
 }, []);
 const fetchData = async (jwtToken) => {
   try {
-    const response = await axios.get('http://localhost:4000/api/admin/alltokenRequests', {
+    const response = await axios.get('https://zoro-food-token.onrender.com/api/admin/alltokenRequests', {
       headers: {
         authorization: `BEARER ${jwtToken}`,
       },
