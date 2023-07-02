@@ -8,7 +8,7 @@ import style from "../../style"
 
 const onSubmit = async (values, actions) => {
     try{
-        const resUser = await axios.post('http://localhost:4000/api/auth/signup',values);
+        const resUser = await axios.post('https://zoro-food-token.onrender.com/api/auth/signup',values);
         console.log(resUser)
         return resUser
       }catch(err){
