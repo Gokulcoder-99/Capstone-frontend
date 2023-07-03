@@ -10,7 +10,7 @@ sudha@gmail.com
 
 
 for counter
-raj.gmail.com
+raj@gmail.com
 
 
 
